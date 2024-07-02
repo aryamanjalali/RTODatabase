@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>VehicleRegistration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"  data-target="#myNavbar">
+        <span class="icon-bar" class="test"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/index2"><span class="glyphicon glyphicon-road"></span> RTO</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/index2"><span class="glyphicon glyphicon-home"> </span> Home</a></li>
+        <li><a href="/about2"><span class="glyphicon glyphicon-align-justify"></span> About</a></li>
+        <li class="active"><a href="/registrations2"><span class="glyphicon glyphicon-file"></span> Registrations</a></li>
+        <li><a href="/dealer2"><span class="glyphicon glyphicon-euro"></span> Dealer</a></li>
+        <li><a href="/license2"><span class="glyphicon glyphicon-credit-card"></span> License</a></li>
+        <li><a href="/Display"><span class="glyphicon glyphicon-credit-card"></span> Profile</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/logout"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+        <!-- <li><a href="/login"><span class="glyphicon glyphicon-user"></span> Login</a></li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+</div>
+</div>
+<section class="h-100 bg-dark">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card card-registration my-4">
+          <div class="row g-0">
+            <div class="col-xl-6 d-none d-xl-block">
+              <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                alt="Sample photo" class="img-fluid"
+                style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" /> -->
+            </div>
+            <form action="/registrations2" method="post">
+            <div class="col-xl-6">
+              <div class="card-body p-md-5 text-black">
+                <h3 class="mb-5 text-uppercase">Vehicle registration form</h3>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m" name="">Full name</label>
+                      <input type="text" id="form3Example1m" class="form-control form-control-lg" name="name" />
+                      
+                    </div>
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m" name="">Aadhaar Number</label>
+                      <input type="text" id="form3Example1m" class="form-control form-control-lg" name="aadhaar_no" />
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1n">Phone Number</label>
+                      <input type="text" id="form3Example1n" class="form-control form-control-lg" name="ph_no" />
+                      
+                    </div>
+                    <div class="form-outline mb-4">
+                                      <label class="form-label" for="form3Example8">User ID</label>
+                  <input type="text" id="form3Example8" class="form-control form-control-lg" name="user_id"/>
+
+                </div>
+                  </div>
+                </div>
+                <div class="form-outline mb-4">
+                                      <label class="form-label" for="form3Example8">Address(Owner)</label>
+                  <input type="text" id="form3Example8" class="form-control form-control-lg" name="addr"/>
+
+                </div>
+
+                <div class="form-outline mb-4">
+                                      <label class="form-label" for="form3Example8">Vehicle Type</label>
+                  <input type="text" id="form3Example8" class="form-control form-control-lg" name="vehicle_type"/>
+
+                </div>
+
+                <div class="row">
+                 <div class="row">
+                  <!-- <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Address(RTO)</label>
+                      <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                      
+                    </div>
+                  </div> -->
+                  <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">RTO Branch</label>
+                      <input type="text" id="form3Example1m" class="form-control form-control-lg" name="RTO_branch"/>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example9">Dealer ID</label>
+                  <input type="text" id="form3Example9" class="form-control form-control-lg" name="d_id"/>
+                  
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example90">Vehicle Number</label>
+                  <input type="text" id="form3Example90" class="form-control form-control-lg" name="vehicle_no" />
+                  
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example99">Vehicle Name</label>
+                  <input type="text" id="form3Example99" class="form-control form-control-lg" name="vehicle_name"/>
+                  
+                </div>
+
+
+                    <div>
+                        <br>
+                <div class="d-flex justify-content-end pt-3">
+                  <input
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" type="submit" name="submit" value="Create account"></input>
+                </div>
+                </div>
+              </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

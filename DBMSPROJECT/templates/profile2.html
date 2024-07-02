@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>VehicleRegistration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"  data-target="#myNavbar">
+        <span class="icon-bar" class="test"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="/index2"><span class="glyphicon glyphicon-road"></span> RTO</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/index2"><span class="glyphicon glyphicon-home"> </span> Home</a></li>
+        <li><a href="/about2"><span class="glyphicon glyphicon-align-justify"></span> About</a></li>
+        <li><a href="/registrations2"><span class="glyphicon glyphicon-file"></span> Registrations</a></li>
+        <li><a href="/dealer2"><span class="glyphicon glyphicon-euro"></span> Dealer</a></li>
+        <li><a href="/license2"><span class="glyphicon glyphicon-credit-card"></span> License</a></li>
+        <li   class="active"><a href="/Display"><span class="glyphicon glyphicon-credit-card"></span> Profile</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/logout"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+        <!-- <li><a href="/login"><span class="glyphicon glyphicon-user"></span> Login</a></li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+</div>
+</div>
+
+<!-- <form action="/Display" method="post">
+<div >
+   <label>Vehicle number:</label>
+   <br>
+<input type="text" id="vehicle_no" name="vehicle_no">
+<input
+                     type="submit" name="submit" value="Submit"></input>
+
+</div>
+</form> -->
+<table>
+<thead>
+<table id="tblgetvehicleclass" class="table table-striped">
+                <thead >
+                    <tr>
+                        <th style="text-align:center"> <label for="vehicle_type">Vehicle type</label></th>
+                        <th style="text-align:center"> <label for="vehicle_no">Vehicle number</label></th>
+                        <th style="text-align:center"> <label for="vehicle_name">Vehicle Name</label></th>
+                        <th style="text-align:center"> <label for="RTO_branch">RTO Branch</label></th>
+                        <th style="text-align:center"> <label for="d_id">Dealer ID</label></th>
+                    </tr>
+{% for trs in vehicles %}
+<tr>
+    <th style="text-align:center"> <label for="vehicle_type">{{trs.vehicle_type}}</label></th>
+    <th style="text-align:center"> <label for="vehicle_no">{{trs.vehicle_no}}</label></th>
+    <th style="text-align:center"> <label for="vehicle_name">{{trs.vehicle_name}}</label></th>
+    <th style="text-align:center"> <label for="RTO_branch">{{trs.RTO_branch}}</label></th>
+    <th style="text-align:center"> <label for="d_id">{{trs.d_id}}</label></th>
+</tr>
+{% endfor %}
+</thead>
+<tbody  style="text-align: center;">
+</tbody>
+</table>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</form>
+<div class="center1">
+<input
+                     type="submit" name="submit" value="Delete"></input>
+    </div>
+</div>
+</body>
+</html>
